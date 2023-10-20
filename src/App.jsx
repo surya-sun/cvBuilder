@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import SideBar_ from './Components/sideBar'
+
 // import './App.css'
 
 function App() {
@@ -8,6 +10,10 @@ function App() {
 
   return (
     <>
+        {/* navbar */}
+
+        {/* sidebar */}
+      <SideBar_ />
 
     </>
   )
