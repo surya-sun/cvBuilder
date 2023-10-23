@@ -4,7 +4,9 @@ import { Sidebar , Menu , MenuItem ,useProSidebar } from "react-pro-sidebar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import routes from "./routesJson";
-// import "../styles/sidebar.scss";
+import Resume from "./resume";
+import { Container } from "react-bootstrap";
+
 export default function SideBar_(){
 
     const { collapseSidebar , rtl } = useProSidebar();
@@ -20,6 +22,7 @@ export default function SideBar_(){
       window.addEventListener('resize' , getSizeOfWindow);
       if(width < 850){
         setShowSideBar(true);
+        setcloseOpenIcon(!closeOpenIcon);
       }
       else{
         setShowSideBar(false);
@@ -28,29 +31,23 @@ export default function SideBar_(){
     },[window.innerWidth])
 
     return(
-       <React.Fragment>
-        <BrowserRouter>
-          <div style={({ height: "90vh" }, { display: "flex"} )}>
-            <Sidebar style={{ height: "90vh" , background : ""  }} collapsed={showSideBar}>
+         <BrowserRouter>
+         <div class="row" >
+            <Sidebar style={{ height: "85.9vh" }}  backgroundColor="white" collapsed={showSideBar} class="col-2">
               <Menu>
-                  <MenuItem icon={ closeOpenIcon ? <i class="bi bi-caret-left-square-fill"></i> : <i class="bi bi-caret-right-square-fill"></i>   } onClick={() => { setcloseOpenIcon(!closeOpenIcon); setShowSideBar(!showSideBar);}} style={{ textAlign: "center" }}>{" "}<p className="h4" >Admin</p></MenuItem>
-                      {/* sidebar links */}
+                  <MenuItem icon={ closeOpenIcon ? <i class="bi bi-caret-left-square-fill"></i> :  <i class="bi bi-caret-right-square-fill"></i>   } onClick={() => { setcloseOpenIcon(!closeOpenIcon); setShowSideBar(!showSideBar);}} style={{ textAlign: "center" }}>{" "}<p className="h4" >Admin</p></MenuItem>
                     {
-                        routes.map(e=><MenuItem component={generateLink(e.path)} key={e.name} icon={generateIcon(e.icon)}>{e.name}</MenuItem>)
-                    }
+                      routes.map(e=><MenuItem 
+                        component={generateLink(e.path)} 
+                        key={e.name} icon={generateIcon(e.icon)}>{e.name}</MenuItem>)
+                      }
              </Menu>
             </Sidebar>
-            <main>
-                {/* routing */}
-                <Routes>
-                    {
-                      routes.map(e=><Route path={e.path} key={e.path} element={<e.element/>}  />)
-                    }
-                </Routes>
+            <main class="col-2">
+              surya teja
             </main>
-         </div>
-       </BrowserRouter>
-      </React.Fragment>
+                      </div>
+        </BrowserRouter>
     )
 }
 

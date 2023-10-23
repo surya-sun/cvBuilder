@@ -1,10 +1,23 @@
 import React from "react";
+import Row from "react-bootstrap/Row";
+import  Col  from "react-bootstrap/Col";
+import  Container from "react-bootstrap/Container"; 
 
 function Detailes(){
     return(
-        <React.Fragment>
-            hello Detailes
-        </React.Fragment>
+        <>
+            {/* <Container>
+                <Row>
+                    <Col lg={5} >
+                        surya
+                    </Col>
+                    <Col lg={1} >
+                        teja
+                    </Col>
+                </Row>
+            </Container> */}
+            surya
+        </>
     )
 }
 
