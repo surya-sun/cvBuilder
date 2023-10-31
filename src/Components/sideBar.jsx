@@ -1,11 +1,14 @@
 import React from "react";
 import  { BrowserRouter , Routes , Route ,  Link } from "react-router-dom";
 import { Sidebar , Menu , MenuItem ,useProSidebar } from "react-pro-sidebar";
+import  Container   from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Skills from "../screens/skils";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import routes from "./routesJson";
 import Resume from "./resume";
-import { Container } from "react-bootstrap";
 
 export default function SideBar_(){
 
@@ -31,23 +34,26 @@ export default function SideBar_(){
     },[window.innerWidth])
 
     return(
-         <BrowserRouter>
-         <div class="row" >
-            <Sidebar style={{ height: "85.9vh" }}  backgroundColor="white" collapsed={showSideBar} class="col-2">
-              <Menu>
-                  <MenuItem icon={ closeOpenIcon ? <i class="bi bi-caret-left-square-fill"></i> :  <i class="bi bi-caret-right-square-fill"></i>   } onClick={() => { setcloseOpenIcon(!closeOpenIcon); setShowSideBar(!showSideBar);}} style={{ textAlign: "center" }}>{" "}<p className="h4" >Admin</p></MenuItem>
-                    {
-                      routes.map(e=><MenuItem 
-                        component={generateLink(e.path)} 
-                        key={e.name} icon={generateIcon(e.icon)}>{e.name}</MenuItem>)
-                      }
-             </Menu>
-            </Sidebar>
-            <main class="col-2">
-              surya teja
-            </main>
-                      </div>
-        </BrowserRouter>
+      <div style={{display : 'flex' , flexDirection:"row" }} >
+          <Sidebar style={{ height: "85.9vh"}}  backgroundColor="white" collapsed={showSideBar}>
+            <Menu>
+                <MenuItem icon={ closeOpenIcon ? <i className="bi bi-caret-left-square-fill"></i> :  <i className="bi bi-caret-right-square-fill"></i>   } onClick={() => { setcloseOpenIcon(!closeOpenIcon); setShowSideBar(!showSideBar);}} style={{ textAlign: "center" }}>{" "}<p className="h4" >Admin</p></MenuItem>
+                  {
+                    routes.map(e=><MenuItem 
+                      component={generateLink(e.path)} 
+                      key={e.name} icon={generateIcon(e.icon)}>{e.name}</MenuItem>)
+                    }
+           </Menu>
+          </Sidebar>
+           <div className="routes_and_resume_paper">
+              <div className="routes" >
+                    <Routes>{routes.map((e,index)=> { return <Route key={index} path={e.path} element={<e.element />} /> } )}</Routes>
+              </div>
+                <div className="resume_layout" >
+                    surya teja
+                </div>
+           </div>
+      </div>
     )
 }
 
