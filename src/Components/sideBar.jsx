@@ -34,7 +34,7 @@ export default function SideBar_(){
     },[window.innerWidth])
 
     return(
-      <div style={{display : 'flex' , flexDirection:"row" }} >
+      <div style={{display : 'flex' }} >
           <Sidebar style={{ height: "85.9vh"}}  backgroundColor="white" collapsed={showSideBar}>
             <Menu>
                 <MenuItem icon={ closeOpenIcon ? <i className="bi bi-caret-left-square-fill"></i> :  <i className="bi bi-caret-right-square-fill"></i>   } onClick={() => { setcloseOpenIcon(!closeOpenIcon); setShowSideBar(!showSideBar);}} style={{ textAlign: "center" }}>{" "}<p className="h4" >Admin</p></MenuItem>
@@ -49,8 +49,8 @@ export default function SideBar_(){
               <div className="routes" >
                     <Routes>{routes.map((e,index)=> { return <Route key={index} path={e.path} element={<e.element />} /> } )}</Routes>
               </div>
-                <div className="resume_layout" >
-                    surya teja
+                <div className={`resume_layout ${width < 850 ? "remove_layout" : ""}`} >
+                     <Resume />
                 </div>
            </div>
       </div>

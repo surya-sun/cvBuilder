@@ -1,22 +1,26 @@
 import React from "react";
+import Form from "react-bootstrap/Form"
 import Row from "react-bootstrap/Row";
 import  Col  from "react-bootstrap/Col";
-import  Container from "react-bootstrap/Container"; 
+import  Container from "react-bootstrap/Container";
+import Heading from "../Components/heading";
 
 function Detailes(){
     return(
         <>
-            {/* <Container>
-                <Row>
-                    <Col lg={5} >
-                        surya
-                    </Col>
-                    <Col lg={1} >
-                        teja
-                    </Col>
-                </Row>
-            </Container> */}
-            surya
+        <Container>
+            <Heading heading="Detailes" />
+            <Form>
+                <Form.Group className="md-3">
+                    <Form.Label>First Name</Form.Label>
+                   <Form.Control className='w-75'  size='sm' type="text" placeholder="Enter Name" />
+                </Form.Group>
+                <Form.Group className="md-3">
+                    <Form.Label>Last Name</Form.Label>
+                   <Form.Control className='w-75'  size='sm' type="text" placeholder="Enter Name" />
+                </Form.Group>
+            </Form>
+        </Container>
         </>
     )
 }
