@@ -45,7 +45,7 @@ export default function SideBar_(){
                     }
            </Menu>
           </Sidebar>
-           <div className="routes_and_resume_paper">
+           <div className={` ${width < 850 ? "" : "routes_and_resume_paper"}`}>
               <div className="routes" >
                     <Routes>{routes.map((e,index)=> { return <Route key={index} path={e.path} element={<e.element />} /> } )}</Routes>
               </div>

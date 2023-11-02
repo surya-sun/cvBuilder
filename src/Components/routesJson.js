@@ -1,3 +1,4 @@
+import Template from "../screens/template";
 import Detailes from "../screens/detailes";
 import Education from "../screens/education";
 import Languages from "../screens/languages";
@@ -6,7 +7,8 @@ import Summary from "../screens/summary";
 import WorkHistory from "../screens/workHistory";
 
 const routes = [
-    {name:"Detailes" , path:"/" , icon : "bi bi-ticket-detailed" ,  element : Detailes  , active:true  },
+    {name:"Template" , path:"/" , icon : "bi bi-file-person-fill" ,  element : Template  , active:true  },
+    {name:"Detailes" , path:"/Detailes" , icon : "bi bi-ticket-detailed-fill" ,  element : Detailes  , active:true  },
     {name:"Summary" , path:"/Summary" , icon:"bi bi-info-circle",  element : Summary , active:false  },
     {name:"Education" , path:"/Education" , icon:"bi bi-backpack" , element : Education , active:false },
     {name:"Languages" , path:"/Languages" , icon:"bi bi-translate" , element : Languages , active:false },
