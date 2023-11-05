@@ -3,7 +3,7 @@ import React from "react";
 function Template(){
     return(
         <React.Fragment>
-            hello Education
+            hello Template
         </React.Fragment>
     )
 }

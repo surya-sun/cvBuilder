@@ -45,13 +45,16 @@ export default function SideBar_(){
                     }
            </Menu>
           </Sidebar>
-           <div className={` ${width < 850 ? "" : "routes_and_resume_paper"}`}>
+           <div className={`${width < 850 ? "" : "routes_and_resume_paper"}`}>
               <div className="routes" >
                     <Routes>{routes.map((e,index)=> { return <Route key={index} path={e.path} element={<e.element />} /> } )}</Routes>
               </div>
-                <div className={`resume_layout ${width < 850 ? "remove_layout" : ""}`} >
+              {
+                width > 850 &&
+                <div className={`resume_layout ${width < 850 ? "remove_layout" : ""}`}>
                      <Resume />
                 </div>
+              }
            </div>
       </div>
     )
