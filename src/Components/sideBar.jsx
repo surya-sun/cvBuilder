@@ -49,12 +49,9 @@ export default function SideBar_(){
               <div className="routes" >
                     <Routes>{routes.map((e,index)=> { return <Route key={index} path={e.path} element={<e.element />} /> } )}</Routes>
               </div>
-              {
-                width > 850 &&
-                <div className={`resume_layout ${width < 850 ? "remove_layout" : ""}`}>
+                <div className={`resume_layout d-none  d-lg-block`}>
                      <Resume />
                 </div>
-              }
            </div>
       </div>
     )
