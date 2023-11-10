@@ -14,12 +14,12 @@ let Resume = (props)=>{
     },[])
 
     return(
-        <div className="w-100 h-100 mt-2 ml-4 border border-2">
+        <div className=" ml-4 border border-2" style={{width : '103%' , height : '100%' }} >
             {/* header => details */}
             <div className="w-100 p-1 bg-dark">
                     <Row>
                         <Col md={5}>
-                             <p className="h5 text-light fw-bold"> { selector.firstName + " " + selector.lastName} </p> 
+                             <p className="h5 text-light fw-bold"> {selector.name} </p> 
                              <p className="h6 text-light"> Software Engineering </p>
                         </Col>
                         <Col>
@@ -28,8 +28,6 @@ let Resume = (props)=>{
             </div>
 
             {/* Summary */}
-
-
 
         </div>
     )
