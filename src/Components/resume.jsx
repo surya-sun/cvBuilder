@@ -2,6 +2,8 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Table from "react-bootstrap/Table";
+
 import { useSelector  , connect } from "react-redux";
 
 let Resume = (props)=>{
@@ -18,11 +20,44 @@ let Resume = (props)=>{
             {/* header => details */}
             <div className="w-100 p-1 bg-dark">
                     <Row>
-                        <Col md={5}>
+                        <Col md={6}>
                              <p className="h5 text-light fw-bold"> {selector.name} </p> 
-                             <p className="h6 text-light"> Software Engineering </p>
+                             <p className="h6 text-light"> {selector.designation} </p>
+
+                             <Table  hover variant="dark" >
+                                <tbody>
+                                    <tr>
+                                        <td> <i class="bi bi-github"></i>  </td>
+                                        <td> { selector.githumProfile } </td>
+                                    </tr>
+                                    <tr>
+                                        <td> <i class="bi bi-linkedin"></i>  </td>
+                                        <td> { selector.linkdinProfile } </td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                             
                         </Col>
                         <Col>
+                            <Table  hover variant="dark" >
+                                <tbody>
+                                    <tr>
+                                        <td> <i class="bi bi-envelope-at-fill"></i>  </td>
+                                        <td> { selector.email } </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> <i class="bi bi-telephone-fill"></i>  </td>
+                                        <td> { selector.phoneNumber } </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> <i class="bi bi-geo-alt-fill"></i>  </td>
+                                        <td> { selector.address } </td>
+                                    </tr>
+
+                                </tbody>
+                            </Table>
                         </Col>
                     </Row>
             </div>
@@ -34,3 +69,5 @@ let Resume = (props)=>{
 }
 
 export default Resume;
+
+{/* <i class="bi bi-telephone-fill"></i> */}
