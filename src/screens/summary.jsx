@@ -27,7 +27,9 @@ function Summary(){
          <Form>
              <Form.Group className="md-3">
                 <Form.Label className="small">Summary</Form.Label>
-                <Form.Control size='sm' name="Summary"   as='textarea' rows={5} placeholder="Summary" data-address="" onChange={onChangeDetailes} value={selector.Summary}  />
+                <Form.Control size='sm' name="summary"   as='textarea' rows={5} 
+                    placeholder="Summary"
+                    onChange={onChangeDetailes} value={selector.summary}  />
             </Form.Group>
         </Form>
      
