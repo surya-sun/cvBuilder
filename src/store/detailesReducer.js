@@ -1,31 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 let initialState =  {
-    name : 'Krishna',
-    designation : 'Software Engineering',
-    phoneNumber : '12345678998',
-    email : 'krishna@example.com',
-    address : 'dwarka,gujarat,india',
-    githumProfile : 'example@githum.com',
-    linkdinProfile : 'example@linkdin.com',
+        // detailes screen state
+                        name : '',
+                        designation : '',
+                        phoneNumber : '',
+                        email : '',
+                        address : '',
+                        githumProfile : '',
+                        linkdinProfile : '',
 
-    // ---------
-    name_ : 'Krishna',
-    designation_ : 'Software Engineering',
-    phoneNumber_ : '12345678998',
-    email_ : 'krishna@example.com',
-    address_ : 'dwarka,gujarat,india',
-    githumProfile_ : 'example@githum.com',
-    linkdinProfile_ : 'example@linkdin.com'
-}
+                        // ---------
+                        name_ : 'Krishna',
+                        designation_ : 'Software Engineering',
+                        phoneNumber_ : '12345678998',
+                        email_ : 'krishna@example.com',
+                        address_ : 'dwarka,gujarat,india',
+                        githumProfile_ : 'example@githum.com',
+                        linkdinProfile_ : 'example@linkdin.com',
+
+    // summary screen state
+        summary : ""
+
+    }
 
 let detailesReducer = createSlice({
     name : 'DETAILES_REDUCER',
     initialState ,
     reducers : {
         changeDetailes : (state , action)=>{
-            let { payload } = action; 
-            console.log({payload})
+            let { payload } = action;
             return {...state, [payload.name] : payload.value };
         }
     }

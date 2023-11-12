@@ -18,10 +18,6 @@ function Detailes(){
        dispatch(changeDetailes(data));
     }
 
-    function  surya(){
-        alert(1);
-    }
-
     return(
         <>
         <Container>
@@ -62,7 +58,7 @@ function Detailes(){
 
                 <Form.Group className="md-3">
                     <Form.Label className="small">Address</Form.Label>
-                   <Form.Control size='sm' name="address"   as='textarea' row={3} placeholder="Dwarka , Gujarat , India" data-address="dwarka,gujarat,india" onChange={onChangeDetailes} value={selector.address}  />
+                   <Form.Control size='sm' name="address"   as='textarea' rows={2} placeholder="Dwarka , Gujarat , India" data-address="dwarka,gujarat,india" onChange={onChangeDetailes} value={selector.address}  />
                 </Form.Group>
 
             </Form>
