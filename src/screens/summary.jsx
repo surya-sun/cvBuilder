@@ -1,9 +1,11 @@
 import React from "react";
+import Heading from "../Components/heading";
+
 
 function Summary(){
     return(
         <React.Fragment>
-            hello summary
+            <Heading heading="Summary" />
         </React.Fragment>
     )
 }

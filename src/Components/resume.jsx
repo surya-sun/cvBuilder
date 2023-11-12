@@ -21,18 +21,18 @@ let Resume = (props)=>{
             <div className="w-100 p-1 bg-dark">
                     <Row>
                         <Col md={6}>
-                             <p className="h5 text-light fw-bold"> {selector.name} </p> 
-                             <p className="h6 text-light"> {selector.designation} </p>
+                             <p className="h5 text-light fw-bold"> {selector.name || selector.name_ } </p> 
+                             <p className="h6 text-light"> {selector.designation || selector.designation_ } </p>
 
                              <Table  hover variant="dark" >
                                 <tbody>
                                     <tr>
                                         <td> <i class="bi bi-github"></i>  </td>
-                                        <td> { selector.githumProfile } </td>
+                                        <td> { selector.githumProfile || selector.githumProfile_ } </td>
                                     </tr>
                                     <tr>
                                         <td> <i class="bi bi-linkedin"></i>  </td>
-                                        <td> { selector.linkdinProfile } </td>
+                                        <td> { selector.linkdinProfile || selector.linkdinProfile_ } </td>
                                     </tr>
                                 </tbody>
                             </Table>
@@ -43,17 +43,17 @@ let Resume = (props)=>{
                                 <tbody>
                                     <tr>
                                         <td> <i class="bi bi-envelope-at-fill"></i>  </td>
-                                        <td> { selector.email } </td>
+                                        <td> { selector.email || selector.email_ } </td>
                                     </tr>
 
                                     <tr>
                                         <td> <i class="bi bi-telephone-fill"></i>  </td>
-                                        <td> { selector.phoneNumber } </td>
+                                        <td> { selector.phoneNumber || selector.phoneNumber_ } </td>
                                     </tr>
 
                                     <tr>
                                         <td> <i class="bi bi-geo-alt-fill"></i>  </td>
-                                        <td> { selector.address } </td>
+                                        <td> { selector.address || selector.address_ } </td>
                                     </tr>
 
                                 </tbody>

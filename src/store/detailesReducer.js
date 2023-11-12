@@ -7,7 +7,16 @@ let initialState =  {
     email : 'krishna@example.com',
     address : 'dwarka,gujarat,india',
     githumProfile : 'example@githum.com',
-    linkdinProfile : 'example@linkdin.com'
+    linkdinProfile : 'example@linkdin.com',
+
+    // ---------
+    name_ : 'Krishna',
+    designation_ : 'Software Engineering',
+    phoneNumber_ : '12345678998',
+    email_ : 'krishna@example.com',
+    address_ : 'dwarka,gujarat,india',
+    githumProfile_ : 'example@githum.com',
+    linkdinProfile_ : 'example@linkdin.com'
 }
 
 let detailesReducer = createSlice({
