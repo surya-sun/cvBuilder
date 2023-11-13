@@ -20,8 +20,11 @@ let initialState =  {
                         linkdinProfile_ : 'example@linkdin.com',
 
     // summary screen state
-        summary : ""
+        summary : "",
 
+    // Education screen state 
+        education : [],
+        
     }
 
 let detailesReducer = createSlice({

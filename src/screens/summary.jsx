@@ -32,7 +32,6 @@ function Summary(){
                     onChange={onChangeDetailes} value={selector.summary}  />
             </Form.Group>
         </Form>
-     
       </Container>
     )
 }
