@@ -33,6 +33,7 @@ let detailesReducer = createSlice({
     reducers : {
         changeDetailes : (state , action)=>{
             let { payload } = action;
+            console.log(payload);
             return {...state, [payload.name] : payload.value };
         }
     }

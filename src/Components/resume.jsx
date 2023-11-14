@@ -17,7 +17,7 @@ let Resume = (props)=>{
     },[])
 
     return(
-        <div className="m-1 border border-2 overflow-scroll" style={{width : '103%' ,height : '533px'}}>
+        <div className="m-1 border border-2 overflow-scroll" style={{width : '100%' ,height : '533px'}}>
                             {/* header => details */}
             <div className="w-100 p-3 bg-dark">
                     <Row>
